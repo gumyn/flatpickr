@@ -46,31 +46,17 @@ function monthSelectPlugin(pluginConfig?: Partial<Config>): Plugin {
     }
 
     function addListeners() {
-      fp._bind(fp.prevMonthNav, "click", (e) => {
+      fp._bind(fp.prevMonthNav, "mousedown", (e) => {
         e.preventDefault();
         e.stopPropagation();
-
-        const selectedMonth = fp.rContainer
-          ?.querySelector<ElementDate>(".flatpickr-monthSelect-month.selected")!
-          .dateObj.getMonth();
-
-        if (selectedMonth === 0) {
-          fp.currentYear--;
-        }
+        fp.currentYear--;
         selectYear();
       });
 
-      fp._bind(fp.nextMonthNav, "click", (e) => {
+      fp._bind(fp.nextMonthNav, "mousedown", (e) => {
         e.preventDefault();
         e.stopPropagation();
-
-        const selectedMonth = fp.rContainer
-          ?.querySelector<ElementDate>(".flatpickr-monthSelect-month.selected")!
-          .dateObj.getMonth();
-
-        if (selectedMonth === 11) {
-          fp.currentYear++;
-        }
+        fp.currentYear++;
         selectYear();
       });
     }
