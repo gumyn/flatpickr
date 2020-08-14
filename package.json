@@ -1,9 +1,9 @@
 {
   "name": "flatpickr",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A lightweight, powerful javascript datetime picker",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@gumyn"
+    "registry": "https://npm.pkg.github.com/@gumyn"
   },
   "scripts": {
     "build": "run-s build:pre build:build build:types build:post",
@@ -68,7 +68,7 @@
   "author": "Gregory <gregory.mkv@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chmln/flatpickr/issues"
+    "url": "https://github.com/gumyn/flatpickr/issues"
   },
   "homepage": "https://flatpickr.js.org",
   "keywords": [
